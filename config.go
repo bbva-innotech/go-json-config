@@ -1,5 +1,5 @@
 // Package config allows you to read simple configuration values on a
-// config.json file stored on your programs working directory
+// config.json file stored on your program's working directory
 package config
 
 import (
