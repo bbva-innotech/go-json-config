@@ -1,0 +1,8 @@
+{
+	"key-string" : "value1",
+	"key-array" : [
+		"value1",
+		"value2",
+		"value3"
+	]
+}

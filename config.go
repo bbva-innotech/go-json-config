@@ -1,3 +1,5 @@
+// Package config allows you to read simple configuration values on a
+// config.json file stored on your programs working directory
 package config
 
 import (
@@ -23,10 +25,12 @@ func init() {
 	}
 }
 
+// Returns a string stored on given key name
 func String(name string) string {
 	return config[name].(string)
 }
 
+// Returns an array of strings stored on given key name
 func StringArray(name string) []string {
 	a := []string{}
 	for _, v := range config[name].([]interface{}) {
