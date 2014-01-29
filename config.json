@@ -1,8 +1,9 @@
 {
 	"key-string" : "value-string",
-	"key-array" : [
+	"key-string-array" : [
 		"value-array-1",
 		"value-array-2",
 		"value-array-3"
-	]
+	],
+	"key-int" : 1
 }

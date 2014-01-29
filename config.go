@@ -25,12 +25,12 @@ func init() {
 	}
 }
 
-// Returns a string stored on given key name
+// String returns a string stored on given key name
 func String(name string) string {
 	return config[name].(string)
 }
 
-// Returns an array of strings stored on given key name
+// StringArray returns an array of strings stored on given key name
 func StringArray(name string) []string {
 	a := []string{}
 	for _, v := range config[name].([]interface{}) {
@@ -38,4 +38,10 @@ func StringArray(name string) []string {
 	}
 
 	return a
+}
+
+// Int returns a int stored on given key
+func Int(name string) int {
+	i := config[name].(float64)
+	return int(i)
 }
