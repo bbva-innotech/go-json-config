@@ -11,8 +11,9 @@ import (
 
 var config map[string]interface{}
 
-func init() {
-	file, err := ioutil.ReadFile("./config.json")
+// Load loads json config file
+func Load(filename string) {
+	file, err := ioutil.ReadFile(filename)
 	if err != nil {
 		log.Fatalf("Error reading config file: %v\n", err)
 		os.Exit(1)
