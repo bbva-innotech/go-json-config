@@ -6,8 +6,16 @@ import (
 )
 
 func Example() {
-	ExampleString()
-	ExampleStringArray()
+
+	config.Load("./config.json")
+
+	value := config.String("key-string")
+	fmt.Println(value)
+
+	values := config.StringArray("key-string-array")
+	for _, value := range values {
+		fmt.Println(value)
+	}
 
 	// Output:
 	// value-string
@@ -22,6 +30,7 @@ func ExampleString() {
 	// {
 	// 	"key-string" : "value-string"
 	// }
+	config.Load("./config.json")
 
 	value := config.String("key-string")
 	fmt.Println(value)
@@ -39,6 +48,7 @@ func ExampleStringArray() {
 	// 		"value-array-3"
 	// 	]
 	// }
+	config.Load("./config.json")
 
 	values := config.StringArray("key-string-array")
 	for _, value := range values {
@@ -56,6 +66,7 @@ func ExampleInt() {
 	// {
 	// 	"key-int" : 1
 	// }
+	config.Load("./config.json")
 
 	value := config.Int("key-int")
 	fmt.Println(value)
