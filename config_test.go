@@ -73,3 +73,16 @@ func ExampleInt() {
 	// Output:
 	// 1
 }
+
+func ExampleBool() {
+	// content of config.json file
+	// {
+	// 	"key-bool" : true
+	// }
+	config.Load("./config.json")
+
+	value := config.Bool("key-bool")
+	fmt.Println(value)
+	// Output:
+	// true
+}

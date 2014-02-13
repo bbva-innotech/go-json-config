@@ -46,3 +46,8 @@ func Int(name string) int {
 	i := config[name].(float64)
 	return int(i)
 }
+
+// Bool returns a bool stored on given key
+func Bool(name string) bool {
+	return config[name].(bool)
+}
